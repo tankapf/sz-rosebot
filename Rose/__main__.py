@@ -69,7 +69,7 @@ async def start_bot():
  _____________________________________________   
 |                                             |  
 |          Deployed Successfully              |  
-|         (C) 2021-2022 by @szteambots        | 
+|         (C) 2021-2022 by @CGuesMasterResmi        | 
 |          Greetings from supun  :)           |
 |_____________________________________________|  
                                                                                                
@@ -87,31 +87,31 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text=" ➕ Add Me To Your Group ➕ ",
+                text=" ➕ Məni Qrupa Əlavə Et ➕ ",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
             )
         ],
         [
            InlineKeyboardButton(
-                text=" ℹ️ About", callback_data="_about"
+                text=" ℹ️ info", callback_data="_about"
             ),
             InlineKeyboardButton(
-                text="🌍 languages ", callback_data="_langs"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="📮 How To Use Me", callback_data="bot_commands"
+                text="🇦🇿 dil ", callback_data="_langs"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🌐 My Website",
-                url=f"https://szrosebot.ml",
+                text="📮 Məndən Necə İsdifadə Edmək Olar", callback_data="bot_commands"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="⚡ Mənim Blogum",
+                url=f"https://t.me/VusalinBlogu",
             ),
             InlineKeyboardButton(
-                text="🔰News Channel",
-                url=f"https://t.me/szroseupdates",
+                text="💡Digər Botlar",
+                url=f"https://t.me/cguesmasterresmi",
             )
         ],
     ]
@@ -121,18 +121,18 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="📚 Commands & help",
+                text="📚 Bot & komutları",
                 url=f"t.me/{BOT_USERNAME}?start=help",
             )
         ]
     ]
 )
 
-IMG = ["https://telegra.ph/file/c8f5c1dd990ca9a3d8516.jpg",
-       "https://telegra.ph/file/77cc3154b752ce822fd52.jpg",
-       "https://telegra.ph/file/e72fb0b6a7fba177cf4c7.jpg",
-       "https://telegra.ph/file/8738a478904238e367939.jpg",
-       "https://telegra.ph/file/68d7830ba72820f44bda0.jpg"
+IMG = ["https://te.legra.ph/file/62aaaa15c65511531cab0.jpg",
+       "https://te.legra.ph/file/62aaaa15c65511531cab0.jpg",
+       "https://te.legra.ph/file/62aaaa15c65511531cab0.jpg",
+       "https://te.legra.ph/file/62aaaa15c65511531cab0.jpg",
+       "https://te.legra.ph/file/62aaaa15c65511531cab0.jpg"
 ]
 
 @app.on_message(filters.command(START_COMMAND))
@@ -180,13 +180,13 @@ async def start(client, message: Message, _):
         for user in users:
           served_users.append(int(user["bot_users"]))
         await message.reply(f"""
-[👋]({random.choice(IMG)}) Hey there {message.from_user.mention}, 
+[👋]({random.choice(IMG)}) Salam Necəsən?🔥 {message.from_user.mention}, 
 
-   My name is Rose, an  advanced telegram Group management Bot For helpYou Protect Your Groups & Suit For All Your Needs. 
+   Mənim Adım Vüsal, Mən Çox Funkusiyalı Qrup Qorumaq Üçün Kodlaşdırılmış Botam Bot Yalnız @Vusaliw Tərəfindən 0dan Tərcümə edilib. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
-⚒ Send Me /help For Get Commands. 
-👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma
+⚒ Əlavə Məlumat Üçün /help Bas. 
+👨‍💻Translate Develeoper : @vusaliw
 """,
             reply_markup=home_keyboard_pm,
         )
@@ -271,14 +271,14 @@ async def startcq(client,CallbackQuery, _):
         served_users.append(int(user["bot_users"]))
     await CallbackQuery.message.edit(
             text=f"""
-👋 Hey there {CallbackQuery.from_user.mention}, 
+👋 Salam Necəsən? 🔥 {CallbackQuery.from_user.mention}, 
 
-   My name is Rose ,an  advanced telegram Group management Bot For help 
+   Mənim Adım Vüsal, Mən Telegram Qrup Qorumaq Üçün Kodlaşdırılmış Botam Bot Yalnız @Vusaliw Tərəfindən 0dan Tərcümə edilib. 
 You Protect Your Groups & Suit For All Your Needs. 
 I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
 
- ⚒ Send Me /help For Get Commands. 
-👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma
+ ⚒ Əlavə Məlumat Üçün /help bas. 
+👨‍💻 Translate Developer : @vusaliw
 """,
             disable_web_page_preview=True,
             reply_markup=home_keyboard_pm)
@@ -289,10 +289,18 @@ async def help_parser(name, keyboard=None):
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
 """
-**Welcome to help menu**
-I'm a group management bot with some useful features.
-You can choose an option below, by clicking a button.
-If you have any bugs or questions on how to use me, 
+**Kömək menyusuna xoş gəldiniz!**
+🙋🏻‍♂️Xoş gəldiniz! Mənim adım Vüsal.
+👮‍♂️Görünür köməyə ehdiyacınız var Məni qrupa əlavə edib admin edin.
+🛡️Aşağıda gördüyünüz modullarımla sizin qrupunuzu tam güvəndə saxlayacam!
+
+Əsas əmrlər:
+ • /help: Kömək menyusu.
+ • /help <modul adı>: müəyyən modul haqqında məlumat verir.
+ 
+Bütün əmrlər / və ya ! ilə işlədilir.
+
+Və aşağıdakılar:, 
 have a look at my [Docs](https://szsupunma.gitbook.io/rose-bot/), or head to @szteambots.
 **All commands can be used with the following: / **""",
         keyboard,
@@ -329,7 +337,7 @@ async def help_button(client, query, _):
                 "Here is the help for", HELPABLE[module].__MODULE__
             )
             + HELPABLE[module].__HELP__
-            + "\n👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma"
+            + "\n👨‍💻Translate Developer : @vusaliw"
         )
         if hasattr(HELPABLE[module], "__helpbtns__"):
                        button = (HELPABLE[module].__helpbtns__) + [[InlineKeyboardButton("« Back", callback_data="bot_commands")]]
