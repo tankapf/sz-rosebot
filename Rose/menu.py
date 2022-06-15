@@ -8,23 +8,23 @@ fbuttons = InlineKeyboardMarkup(
         [
         [
             InlineKeyboardButton(
-                text="👥Support Group", url="https://t.me/szrosesupport"
+                text="👥Support Qrupu", url="https://t.me/cguesmastersupport"
             ),
             InlineKeyboardButton(
-                text="👤News Channel", url="https://t.me/Theszrosebot"
+                text="🌐Digər Botlar", url="https://t.me/cguesmasterresmi"
             )
         ], 
         [
             InlineKeyboardButton(
-                text="⚒ Source Code", url="https://github.com/szsupunma/sz-rosebot"
+                text="🧑🏻‍💻 | Tərcüməçi", url="https://t.me/vusaliw"
             ),
             InlineKeyboardButton(
-                text="📓 Documentation", url="https://szsupunma.gitbook.io/rose-bot"
+                text="💡 Söhbət / Oyun", url="https://t.me/AzeSohbetGurupu"
             )
         ], 
         [
             InlineKeyboardButton(
-                text="🖥 How To Deploy Me", url="https://szsupunma.gitbook.io/rose-bot"
+                text="🎶 Musiqi Botumuz ", url="http://t.me/GoldChatMusicBot"
             )
         ], 
         [
@@ -53,8 +53,8 @@ keyboard =InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="🌎 Help us with translation",
-                url=f"https://crwd.in/szrosebot",
+                text="🌎 Translate Üçün Əlaqə",
+                url=f"https://t.me/vusaliw",
             )
         ],
         [
