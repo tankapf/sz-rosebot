@@ -183,10 +183,10 @@ async def start(client, message: Message, _):
 [👋]({random.choice(IMG)}) Salam Necəsən?🔥 {message.from_user.mention}, 
 
    Mənim Adım Vüsal, Mən Çox Funkusiyalı Qrup Qorumaq Üçün Kodlaşdırılmış Botam Bot Yalnız @Vusaliw Tərəfindən 0dan Tərcümə edilib. 
-I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
+Sizdə Belə Bot İstəyirsiniz? 🙂 Yazın @Vusaliw
 
 ⚒ Əlavə Məlumat Üçün /help Bas. 
-👨‍💻Translate Develeoper : @vusaliw
+🧑🏻‍💻 Translate | Develeoper : @vusaliw
 """,
             reply_markup=home_keyboard_pm,
         )
@@ -273,12 +273,11 @@ async def startcq(client,CallbackQuery, _):
             text=f"""
 👋 Salam Necəsən? 🔥 {CallbackQuery.from_user.mention}, 
 
-   Mənim Adım Vüsal, Mən Telegram Qrup Qorumaq Üçün Kodlaşdırılmış Botam Bot Yalnız @Vusaliw Tərəfindən 0dan Tərcümə edilib. 
-You Protect Your Groups & Suit For All Your Needs. 
-I currently manage about `{len(served_chats)}` groups.I have over `{len(served_users)}` users
+   Mənim Adım Vüsal, Mən Telegram Qrup Qorumaq Üçün Kodlaşdırılmış Botam Bot Yalnız @Vusaliw Tərəfindən 0dan Tərcümə edilib.  
+Sizdə Belə Bot İstəyirsiniz? 🙂 Yazın @Vusaliw
 
  ⚒ Əlavə Məlumat Üçün /help bas. 
-👨‍💻 Translate Developer : @vusaliw
+🧑🏻‍💻 Translate | Developer : @vusaliw
 """,
             disable_web_page_preview=True,
             reply_markup=home_keyboard_pm)
@@ -301,9 +300,8 @@ async def help_parser(name, keyboard=None):
 Bütün əmrlər / və ya ! ilə işlədilir.
 
 Və aşağıdakılar:, 
-have a look at my [Docs](https://szsupunma.gitbook.io/rose-bot/), or head to @szteambots.
-**All commands can be used with the following: / **""",
-        keyboard,
+Sənədlərimə baxın və ya @cguesmasterresmi səhifəsinə keçin.
+Bütün əmrlər aşağıdakılarla istifadə edilə bilər:  fed açmaq /newfed sticker /q r
     )
 
 
@@ -337,7 +335,7 @@ async def help_button(client, query, _):
                 "Here is the help for", HELPABLE[module].__MODULE__
             )
             + HELPABLE[module].__HELP__
-            + "\n👨‍💻Translate Developer : @vusaliw"
+            + "\n🧑🏻‍💻 Translate | Developer : @vusaliw"
         )
         if hasattr(HELPABLE[module], "__helpbtns__"):
                        button = (HELPABLE[module].__helpbtns__) + [[InlineKeyboardButton("« Back", callback_data="bot_commands")]]
